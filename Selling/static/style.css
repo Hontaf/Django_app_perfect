@@ -1,0 +1,10 @@
+body {
+    margin: auto;
+    padding: 50px;
+    background-color: rgb(250, 243, 246) !important;
+    font-family: 'Times New Roman', Times, serif;
+}
+.img1{
+    height: 400px;
+    width: 1300px;
+}

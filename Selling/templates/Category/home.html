@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div>
+    <center>
+        <img class="img1" src="{% static 'Images/ImagesDeGarde.jpg'%}" style="height: 400px;
+        width: 1300px;" alt="">
+    </center>
+    
+</div>
+<hr>
+<br>
+    <div class="category-entry">
+        <table class ="table table-bordered table-striped">
+            <tr> 
+                <th>LIbelle</th>
+                <th>DESCRIPTION</th>
+                <th>Actions</th>
+                </tr>
+            <tr>
+            {% for category in category_list%}
+            
+            <td>{{category.wording}}</td>
+            <td>{{category.description}}</td>
+            
+            <td>
+                <button class = "btn btn-info">
+                    <a class="text-white" href="#">See More</a>
+                </button>
+                <button class = "btn btn-primary" >
+                    <a class="text-white" href="#">Add New</a>
+                </button>
+                <button class = "btn btn-warning" >
+                    <a class="text-white" href="#">Update</a>
+                </button>
+                <button class = "btn btn-danger" >
+                    <a class="text-white" href="#">Delete</a>
+                </button>
+            </td>
+        
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock content %}
